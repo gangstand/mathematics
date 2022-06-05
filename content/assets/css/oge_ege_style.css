@@ -145,6 +145,7 @@
     position: absolute;
     top: 250px;
     left: 50px;
+    opacity: 0;
 }
 
 .formul-two img {
@@ -156,83 +157,36 @@
     position: absolute;
     top: 600px;
     right: 100px;
+    opacity: 0;
 }
 
 .formul-three img {
     width: 125px;
     transform: rotate(25deg);
+    opacity: 0;
 }
 
 .formul-three {
     position: absolute;
     top: 200px;
     right: 0px;
+    opacity: 0;
 }
 
-.formul-one {
-    animation-name: slideLeft;
-    -webkit-animation-name: slideLeft;
-    animation-duration: 1.5s;
-    -webkit-animation-duration: 1.5s;
-    animation-timing-function: ease;
-    -webkit-animation-timing-function: ease;
-}
+@media (min-width: 768px) {
+    .oge-variants {
+        width: 60%;
+    }
 
-.formul-two {
-    animation-name: slideRight;
-    -webkit-animation-name: slideRight;
-    animation-duration: 1.5s;
-    -webkit-animation-duration: 1.5s;
-    animation-timing-function: ease;
-    -webkit-animation-timing-function: ease;
-}
+    .oge-theme {
+        width: 60%;
+    }
 
-.formul-three {
-    animation-name: slideRight;
-    -webkit-animation-name: slideRight;
-    animation-duration: 1.5s;
-    -webkit-animation-duration: 1.5s;
-    animation-timing-function: ease;
-    -webkit-animation-timing-function: ease;
-}
-  
-@keyframes slideLeft {
-    0% {
-      transform: translateX(-150%);
+    .var-word {
+        display: contents;
     }
-    100% {
-      transform: translateX(0%);
-    }
-}
-  
-@-webkit-keyframes slideLeft {
-    0% {
-      -webkit-transform: translateX(-150%);
-    }
-    100% {
-      -webkit-transform: translateX(0%);
-    }
-}
 
-@keyframes slideRight {
-    0% {
-      transform: translateX(150%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-}
-  
-@-webkit-keyframes slideRight {
-    0% {
-      -webkit-transform: translateX(150%);
-    }
-    100% {
-      -webkit-transform: translateX(0%);
-    }
-}
-
-.ot details.warning {
+    .ot details.warning {
     animation-name: slideWarningUp;
     -webkit-animation-name: slideWarningUp;
     animation-duration: 1.5s;
@@ -261,34 +215,95 @@
 
 @keyframes slideWarningUp {
     0% {
-      transform: translateY(50vh);
+      transform: translateY(50%);
     }
     100% {
       transform: translateY(0%);
     }
 }
-  
+
 @-webkit-keyframes slideWarningUp {
     0% {
-      -webkit-transform: translateY(50vh);
+      -webkit-transform: translateY(50%);
     }
     100% {
       -webkit-transform: translateY(0%);
     }
 }
 
+.formul-one {
+    animation-name: slideLeft;
+    -webkit-animation-name: slideLeft;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+}
 
+.formul-two {
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+}
 
-@media (min-width: 768px) {
-    .oge-variants {
-        width: 60%;
-    }
-    
-    .oge-theme {
-        width: 60%;
-    }
+.formul-three {
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+}
 
-    .var-word {
-        display: contents;
+@keyframes slideLeft {
+    0% {
+      transform: translateX(-150%);
     }
+    100% {
+      transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slideLeft {
+    0% {
+      -webkit-transform: translateX(-150%);
+    }
+    100% {
+      -webkit-transform: translateX(0%);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+      transform: translateX(150%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slideRight {
+    0% {
+        -webkit-transform: translateX(150%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+.formul-one {
+    opacity: 1;
+}
+
+.formul-two {
+    opacity: 1;
+}
+
+.formul-three {
+    opacity: 1;
+}
+
 }
