@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}О себе{% endblock title %}
+{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/index_style.css' %}">{% endblock style %}
+{% block content %}
+            <section class="section section--green section--first">
+                <div class="container">
+                    <article class="article">
+                        <header class="article__header">
+                            <h1 class="heading">Джалагония Медея Шотаевна</h1>
+                        </header>
+                        <p class="text">Преподователь математики из РКСИ. Заслуженный специалист с большим опытом работы</p>
+                        <div class="btn">
+                            <a href="">Обратная связь</a>
+                        </div>
+                    </article>
+                    <div class="portrait">
+                        <img src="{% static 'img/decoration/teacher.png' %}" alt="">
+                    </div>
+                </div>
+
+                <div class="circle circle--yellow"></div>
+                <div class="circle circle--green"></div>
+            </section>
+
+            <section class="section section--white section--vert">
+                <h2 class="title">Обо мне</h2>
+                <p class="text text--center">Я работаю учителем начальных классов в средней школе имени Лермонтова.
+                    Педагогический стаж 6 лет. Окончил Иркутский государственный университет</p>
+                <div class="container container--equal">
+                    <div class="achiev">
+                        <div class="achiev__icon"><img src="{% static 'img/icons/edu-icon.png' %}" alt="icon"></div>
+                        <h3 class="achiev__title">Образование</h3>
+                        <p class="achiev__text">Высшее</p>
+                    </div>
+
+                    <div class="achiev">
+                        <div class="achiev__icon"><img src="{% static 'img/icons/resume-icon.png' %}" alt="icon"></div>
+                        <h3 class="achiev__title">Специальность</h3>
+                        <p class="achiev__text">Учитель математики</p>
+                    </div>
+
+                    <div class="achiev">
+                        <div class="achiev__icon"><img src="{% static 'img/icons/cert-icon.png' %}" alt="icon"></div>
+                        <h3 class="achiev__title">Квалификация</h3>
+                        <p class="achiev__text">Педагогика и методика математического
+                            обучения</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--green section--slider">
+
+                <button class="move-btn move-btn--rev" id="back">
+                    <img src="{% static 'img/icons/arove.png' %}" alt="Назад">
+                </button>
+                
+
+                <div class="slider" id="slider">
+                    <div class="slider__line">
+                        <div class="slider__item">
+                            <img src="{% static 'img/achivements/certificate.jpg' %}" alt="Сертификат">
+                        </div>
+
+                        <div class="slider__item">
+                            <img src="{% static 'img/achivements/certificate.jpg' %}" alt="Сертификат">
+                        </div>
+
+                        <div class="slider__item">
+                            <img src="{% static 'img/achivements/certificate.jpg' %}" alt="Сертификат">
+                        </div>
+
+                        <div class="slider__item">
+                            <img src="{% static 'img/achivements/certificate.jpg' %}" alt="Сертификат">
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="move-btn" id="next">
+                    <img src="{% static 'img/icons/arove.png' %}" alt="Дальше">
+                </button>
+            </section>
+{% endblock content %}
+{% block js %}
+<script src="{% static 'js/slider.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+{% endblock js %}

@@ -1,0 +1,281 @@
+.header {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  margin-right: 15px;
+  display: none;
+}
+
+@media (min-width: 420px) {
+  .logo {
+    display: block;
+  }
+}
+
+@media (min-width: 470px) {
+  .logo {
+    margin-right: 50px;
+  }
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__link {
+  padding: .4em .8em;
+  margin-right: 1.7em;
+  border-radius: 10px;
+  background-color: #78d254;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  -webkit-transition: all .3s .01s;
+  transition: all .3s .01s;
+
+  display: none;
+}
+
+
+@media (min-width: 900px) {
+  .nav__link {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1110px) {
+  .nav__link {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1235px) {
+  .nav__link {
+    font-size: 18px;
+  }
+}
+
+.nav__link:hover {
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+.nav__link:last-child {
+  margin-right: 0;
+}
+
+.auth {
+  font-size: 14px;
+  padding: .5em 1.2em;
+  border-radius: 1.2em;
+  -webkit-box-shadow: 0px 4px 8px 0px #00000020;
+          box-shadow: 0px 4px 8px 0px #00000020;
+}
+
+@media (min-width: 470px) {
+  .auth {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 900px) {
+  .auth {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .auth {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1235px) {
+  .auth {
+    font-size: 16px;
+  }
+}
+
+.auth a:first-child {
+  padding-right: .3em;
+}
+
+.auth a:last-child {
+  border-left: 1px solid #000;
+  padding-left: .3em;
+}
+
+.auth a:hover {
+  color: #1f6be6;
+}
+
+.burger {
+  font-size: 20px;
+  box-sizing: border-box;
+  width: 2em;
+  height: 2em;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: .8em;
+
+  border-radius: 50%;
+  background-color: #78d254;
+}
+
+@media (min-width: 470px) {
+  .burger {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 900px) {
+  .burger {
+    display: none;
+  }
+}
+
+.menu {
+  height: max-content;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: all .5s 0s;
+}
+
+.menu span {
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: #fff;
+
+  width: 1.2em;
+  height: 1px;
+  margin-bottom: .2em;
+}
+
+.menu::after, .menu::before {
+  content: '';
+
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: #fff;
+
+  width: 1.2em;
+  height: 1px;
+  margin-bottom: .2em;
+  transition: all .3s 0s;
+}
+
+.menu::after {
+  margin-bottom: 0;
+}
+
+.header__container {
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+@media (min-width: 430px) {
+  .header__container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 900px) {
+  .header__container {
+    justify-content: space-between;
+  }
+}
+
+.nav--burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #fff;
+
+  height: calc(100vh - 80px);
+  width: 100%;
+
+  position: fixed;
+  left: 0;
+  top: 80px;
+
+  z-index: 30;
+
+  transition: all .5s 0s;
+}
+
+.nav--burger .nav__link {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+
+  margin-right: 0;
+  margin-bottom: .8em;
+
+  font-size: 24px;
+
+  width: 10em;
+}
+
+
+.nav--burger .nav__link:last-child {
+  margin-bottom: 0;
+}
+
+.cross span {
+  display: none;
+}
+
+.cross::after {
+  transform: rotate(45deg);
+  position: relative;
+  top: -3px;
+}
+
+.cross::before {
+  transform: rotate(-45deg);
+  position: relative;
+  top: 3px;
+}
+
+.none {
+  display: none;
+  visibility: hidden;
+}

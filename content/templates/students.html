@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Студенту{% endblock title %}
+{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/students_style.css' %}">{% endblock style %}
+{% block content %}
+			<section class="material">
+				<div class="ot">
+				  <div class="material_text">
+				    <h1>СОДЕРЖАНИЕ МАТЕРИАЛА</h1>
+				  </div>
+				  <details class="info info-one">
+				    <summary>1 курс</summary>
+				    <p><a href="">Видео уроки</a></p> 
+				    <p><a href="">Тестирование (В разработке)</a></p> 
+				    <p><a href="">Методические указания</a></p> 
+				  </details>
+				  
+				  <details class="info info-two">
+				    <summary>2 курс</summary>
+				    <p><a href="">Видео уроки</a></p> 
+				    <p><a href="">Методические указания</a></p> 
+				  </details>
+				</div>
+			</section>
+			<section class="material what_material">
+				<div class="what_material_text">
+					<h1>Почему я создала данные материалы</h1>
+					<p>Моя цель – помочь выпускникам основательно подготовиться и приобрести уверенность в своих силах.</p>
+					<p>Программа курса построена таким образом, что каждый последующий блок опирается на предыдущий. Материал доступен для понимания любому ученику. Достаточно освоить методы, которые гарантированно приводят к положительному результату</p>
+				</div>
+				<div class="material_img">
+					<img src="{% static 'img/decoration/students_material.png' %}" alt="">
+				</div>
+			</section>
+{% endblock content %}
+{% block js %}<script src="{% static 'js/students.js' %}"></script>{% endblock js %}
