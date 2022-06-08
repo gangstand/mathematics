@@ -1,8 +1,18 @@
+.main {
+    overflow: hidden;
+
+    margin-bottom: 50px;
+    position: relative;
+}
+
 .oge-variants {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
+
+    position: relative;
+    z-index: 20;
 }
 
 .oge-theme {
@@ -10,6 +20,9 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
+
+    position: relative;
+    z-index: 20;
 }
 
 .var-word {
@@ -145,7 +158,6 @@
     position: absolute;
     top: 250px;
     left: 50px;
-    opacity: 0;
 }
 
 .formul-two img {
@@ -157,78 +169,17 @@
     position: absolute;
     top: 600px;
     right: 100px;
-    opacity: 0;
 }
 
 .formul-three img {
     width: 125px;
     transform: rotate(25deg);
-    opacity: 0;
 }
 
 .formul-three {
     position: absolute;
     top: 200px;
     right: 0px;
-    opacity: 0;
-}
-
-@media (min-width: 768px) {
-    .oge-variants {
-        width: 60%;
-    }
-
-    .oge-theme {
-        width: 60%;
-    }
-
-    .var-word {
-        display: contents;
-    }
-
-    .ot details.warning {
-    animation-name: slideWarningUp;
-    -webkit-animation-name: slideWarningUp;
-    animation-duration: 1.5s;
-    -webkit-animation-duration: 1.5s;
-    animation-timing-function: ease;
-    -webkit-animation-timing-function: ease;
-}
-
-.ot details.info {
-    animation-name: slideWarningUp;
-    -webkit-animation-name: slideWarningUp;
-    animation-duration: 2s;
-    -webkit-animation-duration: 2s;
-    animation-timing-function: ease;
-    -webkit-animation-timing-function: ease;
-}
-
-.ot details.alert {
-    animation-name: slideWarningUp;
-    -webkit-animation-name: slideWarningUp;
-    animation-duration: 2.5s;
-    -webkit-animation-duration: 2.5s;
-    animation-timing-function: ease;
-    -webkit-animation-timing-function: ease;
-}
-
-@keyframes slideWarningUp {
-    0% {
-      transform: translateY(50%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-}
-
-@-webkit-keyframes slideWarningUp {
-    0% {
-      -webkit-transform: translateY(50%);
-    }
-    100% {
-      -webkit-transform: translateY(0%);
-    }
 }
 
 .formul-one {
@@ -257,7 +208,7 @@
     animation-timing-function: ease;
     -webkit-animation-timing-function: ease;
 }
-
+  
 @keyframes slideLeft {
     0% {
       transform: translateX(-150%);
@@ -266,7 +217,7 @@
       transform: translateX(0%);
     }
 }
-
+  
 @-webkit-keyframes slideLeft {
     0% {
       -webkit-transform: translateX(-150%);
@@ -284,26 +235,99 @@
       transform: translateX(0%);
     }
 }
-
+  
 @-webkit-keyframes slideRight {
     0% {
-        -webkit-transform: translateX(150%);
+      -webkit-transform: translateX(150%);
     }
     100% {
-        -webkit-transform: translateX(0%);
+      -webkit-transform: translateX(0%);
     }
 }
 
-.formul-one {
-    opacity: 1;
+.ot details.warning {
+    animation-name: slideWarningUp;
+    -webkit-animation-name: slideWarningUp;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
 }
 
-.formul-two {
-    opacity: 1;
+.ot details.info {
+    animation-name: slideWarningUp;
+    -webkit-animation-name: slideWarningUp;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
 }
 
-.formul-three {
-    opacity: 1;
+.ot details.alert {
+    animation-name: slideWarningUp;
+    -webkit-animation-name: slideWarningUp;
+    animation-duration: 2.5s;
+    -webkit-animation-duration: 2.5s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
 }
 
+@keyframes slideWarningUp {
+    0% {
+      transform: translateY(50vh);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+}
+  
+@-webkit-keyframes slideWarningUp {
+    0% {
+      -webkit-transform: translateY(50vh);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+    }
+}
+
+
+
+@media (min-width: 768px) {
+    .oge-variants {
+        width: 60%;
+    }
+    
+    .oge-theme {
+        width: 60%;
+    }
+
+    .var-word {
+        display: contents;
+    }
+}
+
+.var {
+    background-color: #fff;
+}
+
+.ov-header {
+    margin-bottom: 5px;
+}
+
+.text-ov {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 515px) {
+    .formul-one {
+        display: none;
+    }
+
+    .formul-two {
+        display: none;
+    }
+
+    .formul-three {
+        display: none;
+    }
 }

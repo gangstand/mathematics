@@ -32,7 +32,7 @@ body {
 	justify-content: center;
 	align-content: center;
 	width: 100vw;
-	height: calc(80vh);
+	height: calc(100vh);
 	overflow: hidden;
 }
 
@@ -83,9 +83,6 @@ form .row {
 	}
 	.btn-primary {
 		margin-bottom: 0;
-	}
-	.main {
-		height: calc(100vh);
 	}
 }
 

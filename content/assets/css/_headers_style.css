@@ -178,11 +178,11 @@
 .menu span {
   display: inline-block;
   border-radius: 10px;
-  border: 1px solid #fff;
+
   background-color: #fff;
 
   width: 1.2em;
-  height: 1px;
+  height: 3px;
   margin-bottom: .2em;
 }
 
@@ -191,11 +191,11 @@
 
   display: inline-block;
   border-radius: 10px;
-  border: 1px solid #fff;
+
   background-color: #fff;
 
   width: 1.2em;
-  height: 1px;
+  height: 3px;
   margin-bottom: .2em;
   transition: all .3s 0s;
 }
@@ -269,10 +269,16 @@
   top: -3px;
 }
 
+@media (min-width: 470px) {
+  .cross::after {
+    top: -4px;
+  }
+}
+
 .cross::before {
   transform: rotate(-45deg);
   position: relative;
-  top: 3px;
+  top: 4px;
 }
 
 .none {

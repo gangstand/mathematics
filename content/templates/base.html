@@ -30,20 +30,15 @@
                 </nav>
 
 
-{#                {% if request.user.is_authenticated %}#}
-{#                    <div>Добро пожаловать, {{ user.username }} | <a href="{% url 'logout' %}">Выход</a></div>#}
-{#                {% else %}#}
-{#                    <div class="auth">#}
-{#                       <a href="#">Авторизация</a>#}
-{#                       <a href="#">Регистрация</a>#}
-{#                    </div>#}
-{#                {% endif %}                #}
+               {% if request.user.is_authenticated %}
+                    <div>Добро пожаловать, {{ user.username }} | <a href="{% url 'logout' %}">Выход</a></div>
+               {% else %}
+                    <div class="auth">
+                       <a href="{% url 'login' %}">Авторизация</a>
+                      <a href="{% url 'signup' %}">Регистрация</a>
+                  </div>
+               {% endif %}
 
-                <div class="auth">
-                    <a href="#">Авторизация</a>
-                    <a href="#">Регистрация</a>
-                </div>
-            </div>
 
             <div class="burger" id="burger">
                 <div class="menu">
