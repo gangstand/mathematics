@@ -31,7 +31,7 @@
 
 
                {% if request.user.is_authenticated %}
-                    <div>Добро пожаловать, {{ user.username }} | <a href="{% url 'logout' %}">Выход</a></div>
+                    <div>Добро пожаловать, {{ user.first_name }} | <a href="{% url 'logout' %}">Выход</a></div>
                {% else %}
                     <div class="auth">
                        <a href="{% url 'login' %}">Авторизация</a>
@@ -57,6 +57,7 @@
             <a href="{% url 'contact' %}" class="nav__link">Обратная связь</a>
         </nav>
         <!-- main -->
+        {% block message %}{% endblock message %}
         <main class="main">
             {% block content %}
             {% endblock content %}

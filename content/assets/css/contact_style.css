@@ -105,3 +105,7 @@ form .row {
     transition-delay: 1s;
     transition-duration: 3s;
 }
+
+.none-flex {
+	display: block;
+}
