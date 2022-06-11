@@ -6,9 +6,6 @@
             <div class="formul-one">
                 <img src="{% static 'img/decoration/10.png' %}">
             </div>
-            <div class="formul-two">
-                <img src="{% static 'img/decoration/9898.png' %}">
-            </div>
             <div class="formul-three">
                 <img src="{% static 'img/decoration/40.png' %}">
             </div>
@@ -18,16 +15,9 @@
                 </div>
                 <p class="text-ov">Вы можете скачать тренировочные варианты здесь.</p>
                 <div class="ov-grid">
-                    <a class="var" href="#"><span class="var-word">Вариант&nbsp;</span>1</a>
-                    <a class="var" href="#"><span class="var-word">Вариант&nbsp;</span>2</a>
-                    <a class="var" href="#"><span class="var-word">Вариант&nbsp;</span>3</a>
-                    <a class="var" href="#"><span class="var-word">Вариант&nbsp;</span>4</a>
-                    <a class="var" href="#"><span class="var-word">Вариант&nbsp;</span>5</a>
-                    <a class="var" href="#"><span class="var-word">Вариант&nbsp;</span>6</a>
-                    <a class="var" href="#"><span class="var-word">Вариант&nbsp;</span>7</a>
-                    <a class="var" href="#"><span class="var-word">Вариант&nbsp;</span>8</a>
-                    <a class="var" href="#"><span class="var-word">Вариант&nbsp;</span>9</a>
-                    <a class="var" href="#"><span class="var-word">Вариант&nbsp;</span>10</a>
+                    {% for variant in VariantOge %}
+                        <a class="var" href="http://127.0.0.1:8000/media/{{ variant.file_oge }}"><span class="var-word">Вариант&nbsp</span>{{ variant.title_oge }}</a>
+                    {% endfor %}
                 </div>
             </section>
             <section class="oge-theme">
@@ -35,51 +25,19 @@
                     <h3 class="title">Тема</h3>
                 </div>
                 <div class="ot">
-                    <details class="warning">
+<details class="warning">
                         <summary><b>Программа блока Алгебра</b></summary>
-                        <p>Урок 1. Обыкновенные дроби</p> 
-                        <p>Урок 2. Десятичне дроби</p> 
-                        <p>Урок 3. Положительные и отрицательные числа</p> 
-                        <p>Урок 4. Проценты. Отношения. Пропорции</p>
-                        <p>Урок 5. Представление данных</p> 
-                        <p>Урок 6. Оптимальный выбор</p> 
-                        <p>Урок 7. Степени</p> 
-                        <p>Урок 8. Рациональные и иррациональные числа</p> 
-                        <p>Урок 9. Уравнения</p> 
-                        <p>Урок 10. Действия с формулами</p> 
-                        <p>Урок 11. Теория вероятностей</p> 
-                        <p>Урок 12. Последовательности и прогрессии</p> 
-                        <p>Урок 13. Неравенства</p> 
-                        <p>Урок 14. Функции и их график</p> 
-                        <p>Урок 3. Положительные и отрицательные числа</p> 
-                        <p>Урок 15. Задачи с практическим содержанием</p>  
+                        {% for algebra in BlockAlgebraOge %}
+                            <p><a href="http://127.0.0.1:8000/media/{{ algebra.file_algebra_oge }}">{{ algebra.title_algebra_oge }}</a></p>
+                        {% endfor %}
                       </details>
-                      
+
                       <details class="info">
                         <summary><b>Программа блока Геометрия</b></summary>
-                        <p>Урок 1. Отрезки и углы</p>
-                        <p>Урок 2. Параллельные прямые</p>
-                        <p>Урок 3. Треугольники</p>
-                        <p>Урок 4. Четырехугольники</p>
-                        <p>Урок 5. Площадь</p>
-                        <p>Урок 6. Подобные треугольники</p>
-                        <p>Урок 7. Прямоугольные треугольники</p>
-                        <p>Урок 8. Окружность</p>
-                        <p>Урок 9. Решение треугольников</p>
-                        <p>Урок 10. Анализ геометрических высказываний</p>
-                        <p>Урок 11. Задачи с практическим содержанием</p>
+                        {% for geometria in BlockGeometriaOge %}
+                            <p><a href="http://127.0.0.1:8000/media/{{ geometria.file_geometria_oge }}">{{ geometria.title_geometria_oge }}</a></p>
+                        {% endfor %}
                       </details>
-                      
-                      <details class="alert">
-                        <summary><b>Резюме по блоку Алгебра и блоку Геометрия</b></summary>
-                        <p><b>15 тематических занятий.</b> Математика за 5-6 класс, алгебра за 7-9 класс</p> 
-                        <p><b>11 тематических занятий.</b> Геометрия за 7-9 класс</p> 
-                        <p><b>8 саппорт вебинаров</b></p> 
-                        <p><b>Дополнительные задачи.</b> В формате ОГЭ</p> 
-                        <p><b>Подробный разбор.</b> Реальные экзаменационные варианты ОГЭ</p> 
-                        <p><b>Домашние задания.</b> После каждого урока</p> 
-                        <p><b>Контрольная работа.</b> По всему курсу в формате ОГЭ</p> 
-                    </details>
                 </div>
             </section>
 {% endblock content %}

@@ -1,5 +1,8 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+
+from main.models import Cert
 
 
-class HomePageView(TemplateView):
+class HomePageView(ListView):
+    model = Cert
     template_name = 'index.html'

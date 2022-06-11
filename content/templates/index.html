@@ -58,21 +58,11 @@
 
                 <div class="slider" id="slider">
                     <div class="slider__line">
-                        <div class="slider__item">
-                            <img src="{% static 'img/achivements/certificate.jpg' %}" alt="Сертификат">
-                        </div>
-
-                        <div class="slider__item">
-                            <img src="{% static 'img/achivements/certificate.jpg' %}" alt="Сертификат">
-                        </div>
-
-                        <div class="slider__item">
-                            <img src="{% static 'img/achivements/certificate.jpg' %}" alt="Сертификат">
-                        </div>
-
-                        <div class="slider__item">
-                            <img src="{% static 'img/achivements/certificate.jpg' %}" alt="Сертификат">
-                        </div>
+                        {% for cert in object_list %}
+                            <div class="slider__item">
+                                <img src="http://127.0.0.1:8000/media/{{ cert.file_cert }}" alt="{{ cert.title_cert }}">
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
 
