@@ -10,15 +10,15 @@
 				  </div>
 				  <details class="info info-one">
 				    <summary>1 курс</summary>
-				    <p><a href="">Видео уроки</a></p> 
+				    <p><a href="{% url 'ocv' %}">Видео уроки</a></p>
 				    <p><a href="">Тестирование (В разработке)</a></p> 
-				    <p><a href="">Методические указания</a></p> 
+				    <p><a href="{% url 'metodical_one' %}">Методические указания</a></p>
 				  </details>
 				  
 				  <details class="info info-two">
 				    <summary>2 курс</summary>
-				    <p><a href="">Видео уроки</a></p> 
-				    <p><a href="">Методические указания</a></p> 
+				    <p><a href="{% url 'otv' %}">Видео уроки</a></p>
+				    <p><a href="{% url 'metodical_two' %}">Методические указания</a></p>
 				  </details>
 				</div>
 			</section>

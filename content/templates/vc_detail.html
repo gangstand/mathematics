@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Видео урок {{ object.title }} {% endblock title %}
+{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/' %}">{% endblock style %}
+{% block content %}
+<h2>{{ object.title }}</h2>
+<p>{{ object.body }}</p>
+<video src="http://127.0.0.1:8000/media/{{ object.video }}" controls />
+{% endblock content %}
