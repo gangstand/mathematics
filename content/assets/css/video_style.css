@@ -1,0 +1,111 @@
+.main {
+    display: flex;
+    justify-content: center;
+
+    background-color: #f7f7f7;
+
+    min-height: 100vh;
+    max-height: max-content;
+}
+
+
+.container--video {
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+
+    margin: 40px 0;
+}
+
+@media (max-width: 540px) {
+    .container--video {
+        width: 95%;
+    }
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+
+    width: 100%;
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+.card-header {
+    background-color: #fff;
+}
+
+.card-body a {
+    color: #78d254;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.container--lesson {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: 40px 0;
+}
+
+@media (max-width: 605px) {
+    .container--lesson {
+        width: 95%;
+    }
+}
+
+.lesson-title {
+    margin-bottom: 20px;
+}
+
+.lesson-desc {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 540px) {
+    .lesson-desc {
+        text-align: center;
+    }
+}
+
+.lesson-video {
+    width: 310px;
+    height: 175px;
+}
+
+@media (min-width: 445px) {
+    .lesson-video {
+        width: 420px;
+        height: 237px;
+    }
+}
+
+
+@media (min-width: 605px) {
+    .lesson-video {
+        width: 560px;
+        height: 316px;
+    }
+}
+
+@media (min-width: 770px) {
+    .lesson-video {
+        width: 720px;
+        height: 406px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .lesson-video {
+        width: 1080px;
+        height: 610px;
+    }
+}

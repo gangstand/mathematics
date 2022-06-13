@@ -1,4 +1,5 @@
-from django.views.generic import CreateView
+from django.shortcuts import render
+from django.views.generic import CreateView, ListView
 from .models import Contact
 from django.core.mail import send_mail
 from .forms import ContactForm
@@ -20,3 +21,6 @@ class ContactCreate(SuccessMessageMixin, CreateView):
 
 def email(subject, content):
     send_mail(subject, content, 'ganggstand@gmail.com', ['kulpinikita@gmail.com'])
+
+def PoliticView(req):
+    return render(req, 'politic.html')

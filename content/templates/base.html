@@ -31,13 +31,17 @@
 
 
                {% if request.user.is_authenticated %}
-                    <div>Добро пожаловать, {{ user.first_name }} | <a href="{% url 'logout' %}">Выход</a></div>
+                   <div class="auth">
+                       <span href="{% url 'login' %}">Здравствуйте, {{ user.first_name }}</span>
+                       <a href="{% url 'logout' %}">Выход</a>
+                   </div>
                {% else %}
                     <div class="auth">
                        <a href="{% url 'login' %}">Авторизация</a>
                       <a href="{% url 'signup' %}">Регистрация</a>
-                  </div>
+                    </div>
                {% endif %}
+            </div>
 
 
             <div class="burger" id="burger">

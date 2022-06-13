@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Методические указания{% endblock title %}
-{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/' %}">{% endblock style %}
+{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/metodic_style.css' %}">{% endblock style %}
 {% block content %}
-{% for article in object_list %}
-    <a href="http://127.0.0.1:8000/media/{{ article.file }}">{{ article.title }}</a>
-{% endfor %}
+    <div class="container container--metodic">
+        {% for article in object_list %}
+            <div class="card">
+                <a href="http://127.0.0.1:8000/media/{{ article.file }}">{{ article.title }}</a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}

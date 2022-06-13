@@ -48,13 +48,15 @@
 						{{ form.message }}
 						<label class="form-pd" for="exampleFormControlInput1">Обращение</label>
 					</div>
-					<div class="row-flex">
-						<button type="submit" class="btn btn-primary mr-25">Отправить</button>
+					<div class="row-flex" id="checking">
+						<button :disabled="!agree" type="submit" class="btn btn-primary mr-25">Отправить</button>
 						<div class="custom-control custom-checkbox float-right">
-						  <input type="checkbox" class="custom-control-input" id="customCheck1">
-						  <label class="custom-control-label" for="customCheck1"><a href="#">Обработка персональных данных</a></label>
+						  <input v-model="agree" type="checkbox" class="custom-control-input" id="customCheck1">
+						  <label class="custom-control-label" for="customCheck1"><a href="{% url 'politic' %}">Обработка персональных данных</a></label>
 						</div>
 					</div>
 				</form>
 			</div>
+    <script src="{% static 'js/vue_framework.js' %}"></script>
+    <script src="{% static 'js/confidant_validate.js' %}"></script>
 {% endblock content %}

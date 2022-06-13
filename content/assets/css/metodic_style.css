@@ -1,0 +1,40 @@
+.main {
+    display: flex;
+    justify-content: center;
+
+    background-color: #f7f7f7;
+
+    min-height: 100vh;
+    max-height: max-content;
+}
+
+
+.container--metodic {
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+
+    margin: 40px 0;
+}
+
+@media (max-width: 600px) {
+    .container--metodic {
+        width: 95%;
+    }
+}
+
+.card {
+    background-color: #fff;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.card a {
+    color: #78d254;
+    font-size: 18px;
+    font-weight: 600;
+}

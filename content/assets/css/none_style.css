@@ -67,3 +67,7 @@ button {
             justify-content: space-between;
   }
 }
+
+.errorlist {
+    list-style: none;
+}

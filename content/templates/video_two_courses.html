@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Видео уроки 2 курса {% endblock title %}
-{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/' %}">{% endblock style %}
+{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/video_style.css' %}">{% endblock style %}
 {% block content %}
-{% for article in object_list %}
-    <div class="card">
-        <div class="card-header">
-            <span class="font-weight-bold">№ {{ article.title }}</span>
-        </div>
-        <div class="card-body">
-            <p>{{ article.body }}</p>
-            <!-- Changes start here! -->
-            <a href="{% url 'otv_detail' article.pk %}">Info</a>
-        </div>
+    <div class="container container--video">
+        {% for article in object_list %}
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="font-weight-bold">{{ article.title }}</h2>
+                </div>
+                <div class="card-body">
+                    <!-- Changes start here! -->
+                    <a href="{% url 'otv_detail' article.pk %}">Ссылка на урок</a>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    <br />
-{% endfor %}
 {% endblock content %}

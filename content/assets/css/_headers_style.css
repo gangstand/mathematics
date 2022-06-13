@@ -285,3 +285,18 @@
   display: none;
   visibility: hidden;
 }
+
+.container--politic {
+  flex-direction: column;
+
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.container--politic h2, h1 {
+  margin-bottom: 20px;
+}
+
+.container--politic p {
+  margin-bottom: 40px;
+}

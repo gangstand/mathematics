@@ -1,0 +1,129 @@
+form {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 0;
+    min-height: 90vh;
+    max-height: max-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container--login {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container--reg {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (min-width: 900px) {
+    .container--login {
+        width: 50%;
+    }
+}
+
+.form-floating {
+    width: 80%;
+}
+
+.btn-primary {
+    border-radius: 6px;
+    width: 80%;
+}
+
+
+.form-control {
+    border-radius: 6px;
+}
+
+.form-floating label {
+    font-size: 14px !important;
+}
+
+@media (min-width: 400px) {
+    .form-floating label {
+        font-size: 16px !important;
+    }
+}
+
+.btn-primary {
+    padding: 10px 0;
+    font-size: 16px;
+
+    background-color: #78d254;
+    border-color: #78d254;
+}
+
+.btn-primary:hover {
+    outline: none;
+    background-color: #78d254;
+    border-color: #78d254;
+
+    box-shadow: 0px 0px 4px 0 #78d25430;
+}
+
+.btn-primary:active {
+    outline: none;
+    background-color: #78d254;
+    border-color: #78d254;
+
+    box-shadow: 0px 0px 4px 0 #78d25430;
+}
+
+.btn-primary:focus {
+    outline: none;
+    background-color: #78d254;
+    border-color: #78d254;
+
+    box-shadow: 0px 0px 4px 0 #78d25430;
+}
+
+.form-floating input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.error {
+    margin-top: 10px;
+    color: #BD0000FF;
+}
+
+.btn:disabled {
+    background-color: #78d254;
+    border-color: #78d254;
+	opacity: .7;
+}
+
+.alert-danger {
+    width: 80%;
+}
+
+
+.alert-danger * {
+    color: #842029 !important;
+}
+
+@media (max-width: 550px) {
+    .alert-danger * {
+        font-size: 12px;
+    }
+}
