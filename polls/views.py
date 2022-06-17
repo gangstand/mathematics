@@ -1,8 +1,8 @@
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from django.http import request
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from polls.models import Profile, Question, Answer
+from polls.models import Profile, Question, Answer, Result
+from users.models import CustomUser
 
 
 class PollsListView(LoginRequiredMixin, ListView):
@@ -26,8 +26,11 @@ class PoolsDetailView(LoginRequiredMixin, DetailView):
 
     def post(self, request, *args, **kwargs):
         if request.method == 'POST':
-            answer = request.POST.getlist('answer')
-            print(answer)
-            print(answer.count('False'))
+            answer = request.POST.getlist('answer').count('True')
+            print(request.POST.getlist('answer'))
+            users = CustomUser.objects.all().values_list('last_name', flat=True)
             profile = Profile.objects.all()
-            return render(request, 'polls/result.html', {"answer": answer.count('True'), "profile": profile})
+            profileid = profile.values_list('name', flat=True)
+
+            Result.objects.create(profileid=profileid, rating=answer, username=users)
+            return render(request, 'polls/result.html', {"answer": answer, "profile": profile})

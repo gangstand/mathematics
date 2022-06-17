@@ -4,12 +4,13 @@
 {% block style %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/' %}">{% endblock style %}
 {% block content %}
-
     <h2>{{ polls.name }}</h2>
     <form method="post">
         {% csrf_token %}
+        {% for question in Question %}
+            {{ question.text }}
+        {% endfor %}
         {% for answer in Answer %}
-
             <div>
                 <input type="checkbox" name="answer" value="{{ answer.isright }}">
                 <label for="scales">{{ answer.text }}</label>

@@ -1,5 +1,4 @@
 import uuid
-
 from django.db import models
 from django.urls import reverse
 
@@ -7,11 +6,6 @@ from django.urls import reverse
 class Profile(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=200, verbose_name='Название теста')
-    worktime = models.IntegerField(verbose_name='Время выполнения (мин)')
-    questionscount = models.IntegerField(verbose_name='Количество вопросов')
-    statisfactorily = models.IntegerField(verbose_name='Удовлетворительно')
-    good = models.IntegerField(verbose_name='Хорошо')
-    perfect = models.IntegerField(verbose_name='Отлично')
 
     class Meta:
         verbose_name = 'Тесты'
@@ -22,6 +16,7 @@ class Profile(models.Model):
 
     def get_absolute_url(self):
         return reverse('book_detail', kwargs={'pk': str(self.pk)})
+
 
 class Question(models.Model):
     profileid = models.ForeignKey(Profile, on_delete=models.CASCADE, verbose_name='Тест')
@@ -49,10 +44,10 @@ class Answer(models.Model):
 
 
 class Result(models.Model):
-    profileid = models.ForeignKey(Profile, on_delete=models.CASCADE, verbose_name='Тест')
-    username = models.CharField(max_length=300, verbose_name="ФИО")
+    profileid = models.CharField(max_length=200, verbose_name='Название теста')
+    username = models.CharField(max_length=300, verbose_name="Фамилия")
     datetime = models.DateTimeField(auto_now_add=True, blank=True, verbose_name="Время завершения")
-    rating = models.FloatField(verbose_name="Проценты")
+    rating = models.IntegerField(verbose_name="Правильных ответов")
 
     class Meta:
         verbose_name = 'Результат'

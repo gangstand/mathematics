@@ -6,8 +6,6 @@
     {% for polls in polls_list %}
         <div>
             <h2><a href="{{ polls.get_absolute_url }}">{{ polls.name }}</a></h2>
-            <div>Время выполнения {{ polls.worktime }} мин</div>
-            <div>Количество вопросов - {{ polls.questionscount }}</div>
         </div>
     {% endfor %}
 {% endblock content %}
