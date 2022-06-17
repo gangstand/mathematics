@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'main.apps.MainConfig',
     'students.apps.StudentsConfig',
+    'polls.apps.PollsConfig',
     'oge.apps.OgeConfig',
     'ege.apps.EgeConfig',
     'contact.apps.ContactConfig',

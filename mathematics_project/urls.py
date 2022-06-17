@@ -24,6 +24,7 @@ urlpatterns = [
     path('users/', include('django.contrib.auth.urls')),
     path('', include('main.urls')),
     path('students/', include('students.urls')),
+    path('polls/', include('polls.urls')),
     path('oge/', include('oge.urls')),
     path('ege/', include('ege.urls')),
     path('contact/', include('contact.urls')),

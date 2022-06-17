@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Тестирование{% endblock title %}
+{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/' %}">{% endblock style %}
+{% block content %}
+    {% for polls in polls_list %}
+        <div>
+            <h2><a href="{{ polls.get_absolute_url }}">{{ polls.name }}</a></h2>
+            <div>Время выполнения {{ polls.worktime }} мин</div>
+            <div>Количество вопросов - {{ polls.questionscount }}</div>
+        </div>
+    {% endfor %}
+{% endblock content %}
