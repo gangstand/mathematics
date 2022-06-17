@@ -20,6 +20,7 @@ class PoolsDetailView(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(PoolsDetailView, self).get_context_data(**kwargs)
+
         context['Question'] = Question.objects.all()
         context['Answer'] = Answer.objects.all()
         return context
@@ -27,10 +28,11 @@ class PoolsDetailView(LoginRequiredMixin, DetailView):
     def post(self, request, *args, **kwargs):
         if request.method == 'POST':
             answer = request.POST.getlist('answer').count('True')
+            answer_false = request.POST.getlist('answer').count('False')
             print(request.POST.getlist('answer'))
             users = CustomUser.objects.all().values_list('last_name', flat=True)
             profile = Profile.objects.all()
             profileid = profile.values_list('name', flat=True)
 
-            Result.objects.create(profileid=profileid, rating=answer, username=users)
-            return render(request, 'polls/result.html', {"answer": answer, "profile": profile})
+            Result.objects.create(profileid=profileid, rating=answer, rating_false=answer_false, username=users)
+            return render(request, 'polls/result.html', {"answer": answer, "answer_false": answer_false, "profile": profile})

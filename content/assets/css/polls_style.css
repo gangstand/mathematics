@@ -1,0 +1,69 @@
+
+.polls {
+    min-height: 100vh;
+    max-height: max-content;
+    box-sizing: border-box;
+    padding: 20px 50px;
+
+    background-color: #f7f7f7;
+
+}
+
+@media (max-width: 650px) {
+    .polls {
+        padding: 20px 10px;
+    }
+}
+
+.test-title {
+    margin-top: 20px;
+
+    color: #78d254;
+
+    text-align: center;
+}
+
+.form-check-input:checked {
+    background-color: #78d254;
+    border-color: #78d254;
+
+    box-shadow: 0px 0px 0px 0px #00000000;
+}
+
+.form-check-input:focus {
+    border-color: #78d254;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,0);
+}
+
+.btn-success {
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    margin-top: 30px;
+
+    background-color: #78d254;
+    border-color: #78d254;
+}
+
+.form-check * {
+    cursor: pointer;
+}
+
+.test-link {
+    padding: 20px 10px;
+    border-bottom: 1px solid #78d254;
+    cursor: pointer;
+}
+
+.test-link a {
+    transition: all .3s .01s;
+
+}
+
+.test-link:hover a {
+    color: #78d254;
+
+    font-size: 1.1em;
+}

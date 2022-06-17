@@ -48,6 +48,7 @@ class Result(models.Model):
     username = models.CharField(max_length=300, verbose_name="Фамилия")
     datetime = models.DateTimeField(auto_now_add=True, blank=True, verbose_name="Время завершения")
     rating = models.IntegerField(verbose_name="Правильных ответов")
+    rating_false = models.IntegerField(verbose_name="Не правильных ответов")
 
     class Meta:
         verbose_name = 'Результат'

@@ -2,8 +2,18 @@
 {% load static %}
 {% block title %}Тестирование{% endblock title %}
 {% block style %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/' %}">{% endblock style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/result_style.css' %}">
+{% endblock style %}
 {% block content %}
+    <div class="result-window">
+        <h2 class="info">Результат</h2>
+        <div class="result">
+            <h5 class="cor-ans">Верных ответов: {{ answer }}</h5>
+            <h5 class="incor-ans">Не верных ответов: {{ answer_false }}</h5>
+        </div>
+        <div class="btn btn-success">
+            <a href="{% url 'polls' %}" class="">Вернуться к тестам</a>
+        </div>
+    </div>
 
-    Верных ответов {{ answer }}
 {% endblock content %}

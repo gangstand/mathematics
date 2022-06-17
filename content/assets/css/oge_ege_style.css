@@ -1,6 +1,7 @@
 .main {
     overflow: hidden;
-
+    min-height: 100vh;
+    max-height: max-content;
     margin-bottom: 50px;
     position: relative;
 }

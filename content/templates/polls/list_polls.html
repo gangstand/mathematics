@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Тестирование{% endblock title %}
-{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/' %}">{% endblock style %}
+{% block style %}<link rel="stylesheet" type="text/css" href="{% static 'css/polls_style.css' %}">{% endblock style %}
 {% block content %}
-    {% for polls in polls_list %}
-        <div>
-            <h2><a href="{{ polls.get_absolute_url }}">{{ polls.name }}</a></h2>
-        </div>
-    {% endfor %}
+    <section class="polls">
+        {% for polls in polls_list %}
+            <div class="test-link">
+                <h2><a href="{{ polls.get_absolute_url }}">{{ polls.name }}</a></h2>
+            </div>
+        {% endfor %}
+    </section>
+
 {% endblock content %}
